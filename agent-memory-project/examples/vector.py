@@ -48,7 +48,7 @@ def main():
     try:
         model = OpenAIProvider(model="gpt-4o-mini")
         embedder = OpenAIEmbedder()
-        vector_db = ChromaProvider(path="./vector_memory_db")
+        vector_db = ChromaProvider(path="./tmp/vector_memory_db")
 
     except Exception as e:
         print(f"Fatal Error: {e}")

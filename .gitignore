@@ -67,7 +67,6 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-
 doc/build
 
 # Jupyter Notebook
@@ -102,3 +101,10 @@ venv/
 
 # mypy
 darwin:/lib/mypy
+
+# Database files
+*.db
+*.db-journal
+
+# Temporary files
+*.tmp

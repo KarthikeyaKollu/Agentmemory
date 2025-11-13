@@ -11,7 +11,7 @@ sys.path.append(project_root)
 # 1. Import the main manager and the specific providers you want
 from memory_lib import MemoryManager, BaseDbProvider
 from memory_lib.models import OpenAIProvider
-from memory_lib.db import SqliteProvider, PostgresProvider
+from memory_lib.db import SqliteProvider
 
 
 def print_memories(db: BaseDbProvider, user_id: str):
@@ -70,7 +70,7 @@ def main():
         print("\n" + "="*50)
         print("--- RUNNING DEMO WITH SQLITE ---")
         print("="*50)
-        db_sqlite = SqliteProvider(db_path="my_agent_memory.db")
+        db_sqlite = SqliteProvider(db_path="./tmp/my_agent_memory.db")
         
         # 3. Inject providers into the Manager
         manager_sqlite = MemoryManager(model=model, db=db_sqlite)
